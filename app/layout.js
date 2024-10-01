@@ -8,8 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-
+} from "@/components/ui/breadcrumb";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,34 +28,46 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"   className="p-8 bg-slate-500">
+    <html lang="en" className="p-8 bg-slate-500">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav>
           <ul className="flex gap-6">
-            <li> <Link href="/">Home</Link></li>
-            <li> <Link href="/about">About</Link></li>
-            <li> <Link href="/blog">Blog</Link></li>
-
+            <li>
+              {" "}
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              {" "}
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              {" "}
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li>
+              {" "}
+              <Link href="/posts">Post</Link>
+            </li>
           </ul>
         </nav>
         <hr />
         <Breadcrumb>
-  <BreadcrumbList>
-    <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
-    </BreadcrumbItem>
-    <BreadcrumbSeparator />
-    <BreadcrumbItem>
-      <BreadcrumbLink href="/about">About</BreadcrumbLink>
-    </BreadcrumbItem>
-    <BreadcrumbSeparator />
-    <BreadcrumbItem>
-      <BreadcrumbPage>Mission</BreadcrumbPage>
-    </BreadcrumbItem>
-  </BreadcrumbList>
-</Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/about">About</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Mission</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
         {children}
       </body>
