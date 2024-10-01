@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const page = () => {
+const About = () => {
     // throw new Error ("Y=This is error");
     return (
         <div className="mt-10 bg-gray-400 p-16">
@@ -12,4 +12,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default About;

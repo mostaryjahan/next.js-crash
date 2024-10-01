@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function layout({ children }) {
+export default function AboutLayout({ children }) {
   return (
     <div className="mt-6 ">
       <nav>
